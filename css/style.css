@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap');
+
+:root{
+   --primary-color: 	#38003c;
+   --secondary-color:	#ffffff;
+} 
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing:border-box;
+   font-family: 'Lumanosimo', cursive;
+   text-decoration: none;
+   list-style: none;
+}
+
+html body{
+   background: url(http://localhost/EPL/images/premier-league-bg.png) no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+/*............................login form.............................*/
+#login-form{
+   display: flex;
+   justify-content: center;  
+}
+.form-container{
+   margin-top: 80px;
+   margin-bottom: 40px;
+   background: #ffffff;
+   max-width: 400px;
+   width: 100%;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 4px 7px 10px 4px 	#00ff85;
+   z-index: 101;
+}
+.form-close{
+   position: absolute;
+   top: 10px;
+   right: 20px;
+   color: #38003c;
+   font-size: 24px;
+   opacity: .7;
+   cursor: pointer;
+}
+.form-container h2{
+font-size: 24px;
+color: #38003c;
+text-align: center;
+margin: 10px;
+}
+.form-container .alert-danger{
+   color: red;
+}
+.form-container .input-box{
+   position: relative;
+   margin-top: 20px;
+   padding: 5px 0;
+   width: 100%;
+   height: 50px;
+}
+.form-container .input-box input{
+   width: 100%;
+   height: 100%;
+   border: none;
+   font-size: 16px;
+   color: #e90052;
+   border-bottom: 2px solid #38003c;
+   outline: none;
+   padding: 0 30px;
+   transition: all 0.2s ease;
+}
+
+.input-box input:focus{
+border-color: #00ff85;
+}
+.input-box i{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 25px;
+}
+.input-box i.email,
+.input-box i.password{
+   left: 0;
+   color: #e90052;
+}
+.input-box input:focus ~ i.email,
+.input-box input:focus ~ i.password,
+.input-box input:focus ~ i.pw-hide{
+   color: #00ff85;
+   }
+.input-box i.pw-hide{
+   right: 0;
+   font-size: 25px;
+   color: #e90052;
+}
+/*forgot passwod/ remember me*/
+.option-field{
+   margin-top: 20px;
+   font-weight: 600;
+   display: flex;
+   justify-content: space-between;
+}
+.checkbox {
+  display: flex;
+  column-gap: 5px;
+}
+.checkbox input {
+  accent-color: #00ff85;
+}
+.checkbox label{
+   color: #00ff85;
+   cursor: pointer;
+   user-select: none;
+}
+.option-field a{
+   color: red;
+}
+.option-field a:hover{
+   text-decoration: underline;
+}
+/*.......................... form login button..................*/
+.form-container .button{
+   background-color: #ffffff;
+   width: 100%;
+   margin-top: 20px;
+   color: #00ff85;
+   border: 2px solid #38003c;
+   border-radius: 10px;
+   padding: 10px;
+   cursor: pointer;
+   font-size: 20px;
+   font-weight: 600;
+}
+.form-container .button:hover{
+   background: #00ff85;
+   color: #ffffff;
+   }
+
+/*............................signup form.............................*/
+#signup-form{
+   display: flex;
+   justify-content: center;  
+}
+.form-container1{
+   margin-top: 60px;
+   margin-bottom: 25px;
+   background: #ffffff;
+   max-width: 400px;
+   width: 100%;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 4px 7px 10px 4px 	#00ff85;
+   z-index: 101;
+}
+.form-close{
+   position: absolute;
+   top: 10px;
+   right: 20px;
+   color: #38003c;
+   font-size: 24px;
+   opacity: .7;
+   cursor: pointer;
+}
+.form-container1 h2{
+font-size: 24px;
+color: #38003c;
+text-align: center;
+margin: 10px;
+}
+.form-container1 .input-box{
+   position: relative;
+   margin-top: 20px;
+   padding: 5px 0;
+   width: 100%;
+   height: 50px;
+}
+.form-container1 .input-box input{
+   width: 100%;
+   height: 100%;
+   border: none;
+   font-size: 16px;
+   color: #e90052;
+   border-bottom: 2px solid #38003c;
+   outline: none;
+   padding: 0 30px;
+   transition: all 0.2s ease;
+}
+.form-container1 .invalid-feedback,
+.form-container .invalid-feedback{
+color: red;
+
+}
+
+.form-container1 .input-box input:focus{
+border-color: #00ff85;
+}
+.form-container1 .input-box i{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 25px;
+}
+.form-container1 .input-box i.email,
+.form-container1 .input-box i.password{
+   left: 0;
+   color: #e90052;
+}
+.form-container1 .input-box input:focus ~ i.email,
+.form-container1 .input-box input:focus ~ i.password,
+.form-container1 .input-box input:focus ~ i.pw-hide{
+   color: #00ff85;
+   }
+   .form-container1 .input-box i.pw-hide{
+   right: 0;
+   font-size: 25px;
+   color: #e90052;
+}
+/*.......................... form signup button..................*/
+.form-container1 .input-btn button{
+   background: #ffffff;
+   width: 100%;
+   margin-top: 25px;
+   padding: 10px;
+   color: #00ff85;
+   border: 2px solid #38003c;
+   border-radius: 10px;
+   cursor: pointer;
+   font-size: 20px;
+   font-weight: 600;
+}
+.form-container1 .input-btn button:hover{
+   background: #00ff85;
+   color: #ffffff;
+   }
+   
+.signup,
+.login{
+   padding-top: 15px;
+   font-size: 18px;
+   font-weight: 600;
+   text-align: center;
+}
+#signup,
+#login{
+   font-size: 20px;
+   color: #00ff85;
+   padding: 3px 10px;
+}
+
+
+/*.........................header....................................*/
+header {
+   top: 0;
+   left: 0;
+   height: 70px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px;
+   z-index: 100;
+   background:	#e90052;
+   box-shadow: 4px 7px 10px 4px 	#00ff85;
+   text-decoration: none;
+}
+.nav-bar{
+  width: 1200px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.nav-logo{
+   background-color: black;
+   display: flex;
+   align-items: center;
+   padding: 0 10px;
+}
+.logo-pic{
+   display: flex;
+   align-items: flex-start;
+   position: absolute;
+   left: 7%;
+
+}
+.logo-pic img{
+   height: 110px;
+   width: 110px;
+}
+.logo-brand{
+   font-size: 30px;
+   font-weight: 700;
+   color:	#ffffff;
+   position: absolute;
+   left: 14%;
+}
+.nav-menu{
+  padding: 0 10px;
+}
+.nav-links {
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+.nav-links a{
+   font-weight: 500;
+   transition: 1s;
+   color: #ffffff;
+   margin-left: 100px;
+   font-size: 24px;
+   line-height: 30px;
+}
+.nav-links a:hover,
+.nav-links a.active{
+color: 	#00ff85;
+font-weight: 500;
+}
+  /*......................header login button..........................*/
+header button{
+  text-align: center;
+   background: #00ff85;
+   margin-right: 20px;
+   color:#38003c;
+   border: 2px solid black;
+   border-radius: 10px;
+   padding: 0 10px;
+   text-align: center;
+   text-decoration: none;
+   font-size:20px;
+   font-weight: 700;
+   cursor: pointer;
+}
+header button:hover{
+background: black;
+color: #ffffff;
+}
+
+/*................................ home section/ home container........................................*/
+.home{
+   margin-top: 10px;
+}
+.home-container{
+   display: grid;
+   grid-template-columns: 25% 50% 25%;
+   gap: 5px;
+   margin: 10px;
+}
+/*...........................left aside.....................*/
+.aside-left{
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 1px 3px 7px 1px #00ff85;
+}
+.aside-left h2{
+   text-align:left;
+   margin: 5px;
+   color: #00ff85;
+
+}
+.aside-left h3{
+   box-shadow: 1px 3px 7px 1px #00ff85;
+   color: var(--secondary-color);
+}
+.f-con h4{
+   padding-bottom: 5px;
+   border-bottom: 1px solid var(--primary-color);
+   color: #04f5ff;
+   font-size: 20px;
+   }
+.f-con{
+margin-top: 20px;
+}
+.f-con p{
+   margin: 5px 20px;
+   padding: 10px;
+   font-size: 12px;
+   text-align: center;
+   color: var(--secondary-color);
+}
+
+/*...........................main section/ center sec..................*/
+/*.......................carousel*/
+.main-content{
+ border-radius: 10px;
+}
+.main-content h1{
+   margin: 5px;
+   color: #00ff85;
+}
+#carouselExampleCaptions{
+   padding: 10px;
+   margin-bottom: 10px;
+}
+.carousel-inner{
+   border-radius: 10px;
+}
+/*..................carouse*/
+.row{
+padding: 10px;
+margin: 10px;
+}
+.col{
+   
+}
+.card{
+   margin-top: 10px;
+}
+.card-title{
+   font-weight: 500;
+}
+.card-text{
+   font-size: 12px;
+}
+/*......................right aside......................*/
+.aside-right{
+   padding: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 3px 7px 1px #00ff85;
+}
+.aside-right h2{
+   padding: 5px;
+   color: #00ff85;
+   margin-top: 20px;
+}
+.aside-right span h2{
+   padding: 5px;
+   color: #00ff85;
+   text-align: center;
+}
+.aside-right table td span{
+   background: #e90052;
+   padding: 5px;
+}
+.aside-right table{
+   margin-top: 0px;
+   display: flex;
+   justify-content: center;
+  
+}
+.aside-right table tr th {
+  box-shadow: 0px 7px 0px -3px var(--primary-color);
+   padding: 0 px;
+   color: #04f5ff;
+}
+.aside-right table tr th span{
+   padding: 0 23px;
+}
+.aside-right table tr td{
+   padding: 10px 0;
+   font-size: 12px;
+   text-align: center;
+   color: var(--secondary-color);
+}
+
+/*.................................survey section..............................*/
+.survey{
+   height: auto;
+   display: flex;
+   justify-content: center;
+   padding: 0 10%;
+}
+.survey-content{
+   margin-top: 10px;
+   margin-bottom: 20px;
+   max-width: 1100px;
+}
+.survey-content h1{
+   font-size: 40px;
+   font-weight: 700;
+   text-align: center; 
+}
+.stats{
+   position: relative;
+   margin-top: 20px;
+   align-items: center;
+   border: 2px solid maroon;
+   border-radius: 10px;
+   box-shadow: 1px 3px 7px 1px #00ff85;
+}
+.stats .row{
+   display: flex;
+   padding: 10px 10px;
+}
+.stats .row label{
+   justify-content: space-between;
+   height: 40px; 
+   align-items: center;
+   color: #ffffff;
+   padding-left: 5px;
+}
+.stats .row input{
+   border-radius: 5px;
+   height: 30px;
+   margin-left: 20px;
+   border: 2px solid var(--secondary-color);
+   text-align: center;
+   background: var(--primary-color);
+   font-family: 'poppins' sans-serif;
+   font-size: 14px;
+   color: var(--secondary-color);
+}
+
+
+/*................................table section..................*/
+.table{
+   display: flex;
+   justify-content: center;
+  
+}
+.table-content{
+   margin-top: 10px;
+   margin-bottom: 20px;
+   max-width: 1100px;
+   border: 2px solid maroon;
+   border-radius: 10px;
+   box-shadow: 1px 3px 7px 1px #00ff85;
+}
+.table-content:hover{
+background: var(--secondary-color);
+}
+.table-content h1{
+   font-size: 30px;
+   font-weight: 500;
+   text-align: center;
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+.table-content table{
+   display: flex;
+}
+.table-content table tr span{
+   padding: 0 30px;
+   text-align: start;
+}
+.table-content table tr th{
+   padding: 0 20px;
+   text-align: center;
+   border-bottom: 2px solid var(--secondary-color);
+   background: var(--primary-color);
+   color: var(--secondary-color);
+}
+.table-content table tr td{
+   padding: 10px 20px;
+}
+
+/*........................password Reset*..................*/
+
+.cancel-btn{
+   display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+.cancel-btn a{
+   font-size: 25px;
+   color: red;
+}
+
+/*..........................the admin section.......................*/
+.admin {
+   padding: 10px 5%;
+   height: 100vh;
+}
+.admin h1{
+   height: 400px;
+   width: 300px;
+   background: #ffffff;
+   color: red;
+   padding: 20px;
+   text-align: center;
+   font-size: 50px;
+}
+/*
+.standings{
+   background: #4b0082;
+   height: 150vh;
+   width: 1100px;
+   margin: auto;
+   display: grid;
+   grid-template-columns: 20% 60% 20%;
+   justify-content: center;
+   gap: 10;
+   margin-top: 100px; 
+}*/
+
+
+
+/*...............................footer.........................*/
+.footer{
+   position:relative;
+   bottom: 0;
+   text-align: center;
+   padding: 10px 0;
+   box-shadow: 1px 3px 7px 1px #00ff85;
+   background:#04f5ff;
+   color: var(--primary-color);
+}
+
+
+/*.................................bootstrap extra styles..........................*/
+.carousel-caption{
+   background: #38003c;
+   opacity: .7;
+   border-radius: 10px;
+}
+.carousel-item h5{
+   color: #00ff85;
+}
+
+.selector-for-some-widget {
+   box-sizing: content-box;
+ }
+
+ .main-content .row{
+   
+ }
+ .main-content .row .col {
+   display: flex;
+   justify-content: center;
+ }
